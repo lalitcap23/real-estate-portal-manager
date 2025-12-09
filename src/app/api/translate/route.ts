@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// API routes should be dynamic, not statically generated
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
 

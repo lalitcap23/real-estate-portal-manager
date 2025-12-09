@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getAllProperties } from '@/lib/sanity/queries'
 import { PropertyFilters } from '@/lib/sanity/types'
 
+// API routes should be dynamic, not statically generated
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams

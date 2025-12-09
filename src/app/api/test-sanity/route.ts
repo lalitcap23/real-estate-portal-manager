@@ -1,6 +1,10 @@
  import { NextResponse } from 'next/server'
 import { client } from '@/lib/sanity/client'
 
+// API routes should be dynamic, not statically generated
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 export async function GET() {
   try {
     const result = await client.fetch('*[_type == "property"][0...3]')

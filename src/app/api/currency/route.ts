@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// API routes should be dynamic, not statically generated
+export const dynamic = 'force-dynamic'
+export const runtime = 'nodejs'
+
 // FCA Live API Configuration
 const FCA_API_KEY = process.env.FCA_API_KEY;
 const FCA_API_BASE_URL = process.env.FCA_API_BASE_URL || "https://api.freecurrencyapi.com/v1/latest";
